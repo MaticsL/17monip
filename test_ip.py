@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
 import sys
+import IP
+
 PY3 = sys.version_info[0] == 3
 
 if PY3:
@@ -9,9 +11,6 @@ if PY3:
 else:
     def u(s):
         return s.decode('utf-8')
-
-
-import IP
 
 
 def test_ip():

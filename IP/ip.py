@@ -10,8 +10,13 @@ except ImportError:
 
 __all__ = ['IPv4Database', 'find']
 
-_unpack_V = lambda b: struct.unpack("<L", b)[0]
-_unpack_N = lambda b: struct.unpack(">L", b)[0]
+
+def _unpack_V(b):
+    return struct.unpack("<L", b)[0]
+
+
+def _unpack_N(b):
+    return struct.unpack(">L", b)[0]
 
 
 def _unpack_C(b):
